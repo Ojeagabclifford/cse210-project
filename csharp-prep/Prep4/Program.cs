@@ -9,19 +9,26 @@ class Program
         List<int> numbers = new List<int>();
         
         int userNumbers = -1;
+        string cs = "";
         Console.WriteLine("Enter a list of Numbers (press 0 if you are done)");
-        while (userNumbers != 0)
+         
+        
+        do
         {
-            
-            Console.Write("Enter a number: ");
+             do{
+                Console.Write("Enter a number: ");
 
-            string userResposne = Console.ReadLine();
-            userNumbers = int.Parse(userResposne);
+                string userResposne = Console.ReadLine();
+                userNumbers = int.Parse(userResposne);
 
-            if  (userNumbers != 0){
-            numbers.Add(userNumbers);
-            }
-        }
+                if  (userNumbers != 0){
+                numbers.Add(userNumbers);
+                }} while(userNumbers!=0);
+            cs=Con();
+            } while (cs == "yes");
+         
+          
+        
          int sum = 0;
          int max = numbers[0];
 
@@ -46,5 +53,11 @@ class Program
         
 
         
+    }
+
+    static string Con(){
+        Console.Write("do you want to continue?");
+       string con =   Console.ReadLine();
+     return con;
     }
 }
