@@ -12,6 +12,8 @@ class Program
         job1._startYear =2020;
         job1._endYear=2024;
 
+        job1.Display();
+
         Job job2 = new Job();
         job2._company ="Apple";
         job2._jobTitle ="Manager";
